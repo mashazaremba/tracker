@@ -16,6 +16,11 @@ public class Error {
         this.message = message;
     }
 
+    public Error(int status, String message) {
+        this.status = status;
+        this.message = message;
+    }
+
     public void showInfo() {
         System.out.println("active: " + this.active);
         System.out.println("status: " + this.status);
