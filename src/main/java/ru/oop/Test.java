@@ -8,18 +8,13 @@ public class Test {
         a += 1;
     }
 
-    public static void test1(Test test) {
-        test.b += 1;
+    public void test1(int a) {
+
     }
 
     public static void main(String[] args) {
-        int a = 10;
-        test(a);
-        System.out.println(a);
-
-        Test test = new Test();
-        test.b = 10;
-        test1(test);
-        System.out.println(test.b);
+Test.test(10);
+Test test = new Test();
+test.test1(20);
     }
 }
