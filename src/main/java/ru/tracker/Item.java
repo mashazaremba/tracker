@@ -9,6 +9,8 @@ public class Item {
     private String name;
     private LocalDateTime created = LocalDateTime.now();
 
+    private Status status = Status.ACCEPTED;
+
     public Item() {
     }
 
@@ -47,6 +49,15 @@ public class Item {
                 + "id=" + id
                 + ", name='" + name + '\''
                 + ", created=" + created.format(FORMATTER)
+                + ", status=" + status
                 + '}';
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
     }
 }
