@@ -29,7 +29,7 @@ public class Tracker {
         return rsl;
     }
 
-    public boolean replace(Item item, int id) {
+    public boolean replace(int id, Item item) {
         int index = indexOf(id);
         if (index == -1) {
             return false;
