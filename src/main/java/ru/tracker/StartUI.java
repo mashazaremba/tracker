@@ -1,5 +1,6 @@
 package ru.tracker;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class StartUI {
@@ -45,6 +46,28 @@ public class StartUI {
                 Item item = tracker.findById(id);
                 tracker.delete(id);
                 System.out.println(item != null ? "Заявка удалена успешно." : "Ошибка удаления заявки.");
+            } else if (select == 4) {
+                System.out.println("=== Вывод заявки по id ===");
+                System.out.print("Введите id: ");
+                int id = Integer.parseInt(scanner.nextLine());
+                Item item = tracker.findById(id);
+                if (item == null) {
+                    System.out.println("Заявка с введенным id: " + id + " не найдена.");
+                } else {
+                    System.out.println(item);
+                }
+            } else if (select == 5) {
+                System.out.println("=== Вывод заявок по имени ===");
+                System.out.print("Введите имя: ");
+                String name = scanner.nextLine();
+                Item[] items = tracker.findByName(name);
+                if (items.length == 0) {
+                    System.out.println("Заявка с введенным именем: " + name + " не найдена.");
+                } else {
+                    for (Item item : items) {
+                        System.out.println(item);
+                    }
+                }
             } else if (select == 6) {
                 run = false;
             }
