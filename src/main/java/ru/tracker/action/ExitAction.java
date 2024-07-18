@@ -1,4 +1,7 @@
-package ru.tracker;
+package ru.tracker.action;
+
+import ru.tracker.input.Input;
+import ru.tracker.Tracker;
 
 public class ExitAction implements UserAction {
     @Override

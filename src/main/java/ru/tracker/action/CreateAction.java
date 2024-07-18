@@ -1,4 +1,8 @@
-package ru.tracker;
+package ru.tracker.action;
+
+import ru.tracker.input.Input;
+import ru.tracker.Tracker;
+import ru.tracker.model.Item;
 
 public class CreateAction implements UserAction {
     @Override

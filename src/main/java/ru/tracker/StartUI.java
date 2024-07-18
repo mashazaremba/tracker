@@ -1,5 +1,9 @@
 package ru.tracker;
 
+import ru.tracker.action.*;
+import ru.tracker.input.ConsoleInput;
+import ru.tracker.input.Input;
+
 public class StartUI {
     public void init(Input input, Tracker tracker, UserAction[] actions) {
         boolean run = true;
